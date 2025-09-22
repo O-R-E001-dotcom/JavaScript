@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+
+    <style>
+        .js-demo {
+        background-color: #f8f9fa;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 8px;
+        border: 2px solid brown;
+        color: black
+    }
+    
+    .output {
+        background-color: #e9ecef;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 5px;
+        font-family: 'Courier New', monospace;
+        border-left: 4px solid #703a16;
+    }
+    
+    .demo-button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 5px;
+    }
+    
+    .demo-button:hover {
+        background-color: #0056b3;
+    }
+    </style>
+</head>
+<body>
+    <div class="js-demo">
+       <h3>Simple Calculator</h3>
+        <p>Performing simple Arithmetic operations:</p>
+        
+        <button class="demo-button" onclick="showArithmeticOperators()">Arithmetic Operations</button>
+       
+        <div id="operators-output" class="output">Click a button to explore operators...</div> 
+    </div>
+
+    <script>
+    function showArithmeticOperators() {
+        let firststNumber = prompt("Enter first number:");
+        let secondNumber = prompt("Enter second number:");
+
+        let addition = Number(firststNumber) + Number(secondNumber);        
+        let subtraction = Number(firststNumber) - Number(secondNumber);     
+        let multiplication = Number(firststNumber) * Number(secondNumber);  
+        let division = Number(firststNumber) / Number(secondNumber);        
+        let remainder = Number(firststNumber) % Number(secondNumber);       
+        let exponentiation = Number(firststNumber) ** Number(secondNumber); 
+        
+        let output = `
+            <strong>Arithmetic Operators:</strong><br><br>
+            firstnumber = ${firsttNumber}, secondNumber = ${secondNumber}<br><br>
+            Addition (firstnumber + secondNumber): ${addition}<br>
+            Subtraction (firstnumber - secondNumber): ${subtraction}<br>
+            Multiplication (firstnumber * secondNumber): ${multiplication}<br>
+            Division (firstnumber / secondNumber): ${division.toFixed(3)}<br>
+            Remainder/Modulo (firstNumber % secondNumber): ${remainder}<br>
+            Exponentiation (firstNumber ** secondNumber): ${exponentiation}<br><br>
+            <em>% gives remainder, ** is exponentiation (ES2016)</em>
+        `;
+        
+        document.getElementById('operators-output').innerHTML = output;
+
+        console.log('You have performed basic arithmetic operation')
+        console.log(output)
+    }
+</script>
+</body>
+</html>
