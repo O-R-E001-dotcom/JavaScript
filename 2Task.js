@@ -1,7 +1,7 @@
 
 
-function getGrade() {
-    let score = prompt("Enter your score");
+function getGrade(score) {
+    score = Number(prompt("Enter your score"));
 
     if (score === 100) {
         console.log("Grade: A+ - Outstanding");
@@ -17,7 +17,7 @@ function getGrade() {
         console.log("Grade: F - Failed"); 
     }
 }
-console.log(getGrade(score));
+
 
     
 function calculatePrice() {
@@ -117,3 +117,36 @@ function atm() {
     console.log(`New balance: ${balance}`);
 
 
+function personalAssistant() {
+    let dayType = [
+        { weekDay: false},
+        { weekend: true},
+        { holiday: true},
+    ];
+
+    // dayType.forEach(day => {
+    //     let canTravel = dayType?
+    //     console.log(`${day.dayType} can travel: ${canTravel}`);
+    // })
+
+    let time = "hour";
+    let hour = time? "daytime": "night";
+    console.log(`Hour: ${hour}`);
+    
+
+    let weather = [
+        { type: "rainy" },
+        { type: "sunny" },
+        { type: "cloudy" },
+    ];
+    if (weather === "rainy" || weather === "cloudy") {
+        console.log("It is not advisable to go out")
+    } else {
+        console.log("Have a nice day today")
+    }
+    if (weather === "sunny") {
+        console.log("What a sunny day today!")
+    } else {
+        console.log("The weather isn't sunny today")
+    }
+}
