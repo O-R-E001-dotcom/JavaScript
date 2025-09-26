@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <script src="./JS5.js" defer></script>
+</head>
+<body>
+    <h1>TASK 1</h1>
+    <h2>HTML Page</h2>
+    <p id="paragraph">This is the paragraph</p>
+    <button onclick="changeColour()">Click to see</button>
+
+    
+
+    <h2>TASK 2: Word Counter</h2>
+    <textarea placeholder="Your typing shows here"></textarea>
+    <div class="count">
+    Characters: <span id="charCount">0</span> |
+    Words: <span id="wordCount">0</span>
+    </div>
+    
+
+
+
+    <script>
+        function changeColour() {
+            document.getElementById('paragraph').style.color = "green"
+        }
+    </script>
+
+</body>
+</html>
