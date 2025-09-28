@@ -1,5 +1,5 @@
 
-
+// Exercise 1
 function getGrade(score) {
     score = Number(prompt("Enter your score"));
 
@@ -18,8 +18,7 @@ function getGrade(score) {
     }
 }
 
-
-    
+// Exercise 2
 function calculatePrice() {
     let discount = 0;
     let price = Number(prompt("Enter price of good(s)"));
@@ -53,7 +52,7 @@ console.log(`Original: #${result.originalPrice}`);
 console.log(`Discount: #${result.discountPercent}`);
 console.log(`Final price: #${result.finalPrice}`);
 
-
+// Exercise 3
 function weatherAdvice() {
     let temperature = 40;
     let isRaining = true;
@@ -74,6 +73,7 @@ function weatherAdvice() {
     console.log(advice)
 }
 
+// Exercise 4
 function atm() {
     let balance = 2000;
     let action = prompt("Do you want to Withdraw or Deposit").toLowerCase();
@@ -116,37 +116,22 @@ function atm() {
 
     console.log(`New balance: ${balance}`);
 
-
-function personalAssistant() {
-    let dayType = [
-        { weekDay: false},
-        { weekend: true},
-        { holiday: true},
-    ];
-
-    // dayType.forEach(day => {
-    //     let canTravel = dayType?
-    //     console.log(`${day.dayType} can travel: ${canTravel}`);
-    // })
-
-    let time = "hour";
-    let hour = time? "daytime": "night";
-    console.log(`Hour: ${hour}`);
-    
-
-    let weather = [
-        { type: "rainy" },
-        { type: "sunny" },
-        { type: "cloudy" },
-    ];
-    if (weather === "rainy" || weather === "cloudy") {
-        console.log("It is not advisable to go out")
-    } else {
-        console.log("Have a nice day today")
-    }
-    if (weather === "sunny") {
-        console.log("What a sunny day today!")
-    } else {
-        console.log("The weather isn't sunny today")
-    }
+// Exercise 5
+function personalAssistant(time, weather, dayType) {
+    let notify = dayType === "workday" ? "It is a workday!" :
+                 dayType === "weekend" ? "Time to rest and chill!" :
+                 dayType === "holiday" ? "Enjoy your holiday!" : "Invalid day"
+    notify += (weather === "sunny") ? "It is a sunny day" :
+              (weather === "rainy") ? "Take an umbrella with you on your way out" :
+              (weather === "cloudy") ? "A cloudy weather" : "Weather status unknown"
+  if (time < 12 && time >= 0) {
+    notify += "Have a wonderful morning";
+  } else if (time > 13 && time < 18) {
+    notify += "Have a splendid afternoon";
+  } else if (time >= 18 && time <= 23) {
+    notify += "It is evening time";
+  } else {
+    notify += "Time format not recognized"
+  }
+  console.log(notify);
 }

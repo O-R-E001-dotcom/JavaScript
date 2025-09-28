@@ -1,3 +1,4 @@
+// Exercise 1
 function practiceExercise6() {
     let password = prompt("Enter password");
     function isPasssword(password) {
@@ -30,7 +31,7 @@ console.log(isPasssword(password));
 // // console.log(isPasssword('password'));
 console.log("")
 
-
+// Exercise 2
 function formatPercentage(value) {
   let perc = `${(value * 100).toFixed(2)}%`;
   console.log(perc)
@@ -40,7 +41,7 @@ function formatPercentage(value) {
 // console.log("")
 console.log("")
 
-
+// Exercise 3
 function calculateCompoundInterest(principal, rate, years) {
     let amount = principal * (1 + rate) ** years;
     console.log(`Final amount: ${amount.toFixed(2)}`);
@@ -48,6 +49,7 @@ function calculateCompoundInterest(principal, rate, years) {
 }
 console.log("")
 
+// Exercise 4
 function canGraduate(credits, gpa) {
     if (credits >= 120 && gpa >= 2.0) {
     return console.log("You can graduate");
@@ -58,7 +60,7 @@ function canGraduate(credits, gpa) {
 }
 console.log("");
 
-
+// Exercise 5
 function reverseWords(sentence) {
   let words = sentence.split(" ");
   let reversed = words.reverse();

@@ -1,5 +1,5 @@
+//Exercise 1
 let movie = {
-
     title: "Megan",
     director: "Julie Megan",
     releaseYear: 2009,
@@ -62,6 +62,7 @@ displayTopMovies(movies);
 console.log("");
 console.log("");
 
+// Practice 2
 let cartItem = {
     name: "phone",
     price: 300,
@@ -118,12 +119,12 @@ function getCartTotal(cart) {
 }
 console.log("Sum of all items:", getCartTotal(cart));
 console.log("");
-console.log("");
 
+//Practice 3
 let member = {
     name: "George Banks",
-    membershipInfo: ["basic", "premium"],
-    borrowedBooks: ["Lasswell, Maths, Eng"],
+    membershipInfo: "basic",
+    borrowedBooks: ["Lasswell", "Maths", "Eng"],
 
     borrowBook(book) {
         this.borrowedBooks.push(book);
@@ -143,5 +144,4 @@ let member = {
 };
 console.log(member.borrowBook("Agric"));
 console.log(member.getBorrowedCount());
-console.log(member.getMembershipInfo("basic"));
-console.log(member)
+console.log(member.getMembershipInfo("premium"));
