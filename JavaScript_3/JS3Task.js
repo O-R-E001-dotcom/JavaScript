@@ -1,4 +1,5 @@
 
+// Exercise 1
 let shoppingList = ["sugar", "milk", "rice"];
         console.log("Shopping lIst:", shoppingList);
 
@@ -21,7 +22,7 @@ function formatList(list) {
 }
 console.log("")
 
-
+// Exercise 2
 let grades = [10, 20, 30, 40]
 function getAverage(grades) {
     let sum = 0;
@@ -95,7 +96,7 @@ function getPassRate(grades) {
 
 console.log("")
 
-
+// Exercise 3
 let movies = ["blue ice", "wednesday", "alice"];
 let ratings = [2, 5, 7];
 
@@ -140,3 +141,64 @@ function printSummary() {
 }
 let theSummary = printSummary()
 console.log(theSummary())
+
+// Exercise 4
+let names = [];
+let grades = [];
+
+function addStudent(name, grade) {
+  names.push(name);
+  grades.push(grade);
+  console.log(`Student: ${name}, has the grade: ${grade}`);
+  console.log(`Student names: ${names}`);
+  console.log(`Student grades: ${grades}`);
+}
+addStudent("Ore", 95);
+addStudent("Samantha", 82);
+
+function calcAverage(grades) {
+  let totalGrade = 0;
+  for (let grade of grades) {
+    totalGrade += grade;
+  }
+  let averageGrade = totalGrade / grades.length;
+  console.log("Average class grade is:", averageGrade);
+  return averageGrade;
+}
+
+function highestAndLowestGrade(grades) {
+  let highestGrade = Math.max(...grades);
+  let lowestGrade = Math.min(...grades);
+  console.log("The highest grade is:", highestGrade); 
+  console.log("The lowest grade is:", lowestGrade); 
+  return { highestGrade, lowestGrade};
+}
+
+function gradeCategorizer(grade) {
+  if (grade === 100) {
+    return "A+ Outstanding";
+  } else if (grade >= 90) {
+    return "A-";
+  } else if (grade >= 80) {
+    return "A";
+  } else if (grade >= 70) {
+    return "B";
+  } else if (grade >= 60) {
+    return "C";
+  } else if (grade > 50) {
+    return "D";
+  } else {
+    return "F";
+  }
+}
+
+function generateReport() {
+  let students = [];
+  for (let i = 0; i < names.length; i++) {
+    students.push({
+      studentName: names[i],
+      studentGrade: grades[i],
+      letter: gradeCategorizer(grades[i])
+    });
+  }
+}
