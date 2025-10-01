@@ -1,0 +1,57 @@
+* {
+    text-align: center;
+}
+
+.exercise3 {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    padding: 40px;
+    /* transition: background 0.3s, color 0.3s; */
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+    animation: flash 2s ease-in-out infinite;
+}
+
+button:hover {
+    transform: translateX(-5px);
+    box-shadow: 0 8px 16px;
+}
+    /* Light Theme */
+.light {
+    background: #ffffff;
+    color: #000000;
+}
+
+.light button {
+    background: #f0f0f0;
+    color: #000;
+}
+
+    /* Dark Theme */
+.dark {
+    background: #0b0101;
+    color: #ffffff;
+}
+
+.dark button {
+    background: #333;
+    color: #fff;
+}
+
+    /* Blue Theme */
+.blue {
+    background: #1372d1;
+    color: white;
+}
+
+.blue button {
+    background: #350d8b;
+    color: #fff;
+}

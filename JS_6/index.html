@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div class="gen-container">
+        <div class="exercise1">
+             <h1>Persistent Note App</h1>
+            <textarea name="notes" id="notes-app" placeholder="Type here..."></textarea>
+            <button onclick="save()" id="saves">Save note</button>
+        </div>
+
+        <div>
+            <button onclick="load()" id="loads">Load Note</button>
+        </div>
+
+        <div id="timeStamp"></div>
+
+        <!-- Exercise 2 -->
+         <div class="exercise2">
+            <h1>Visit counter with reset</h1>
+            <p id="theMessage"></p>
+            <p id="visit"></p>
+            <button id="resetBtn">Reset Counter</button>
+         </div>
+        
+         <!-- Exercise 3 -->
+        <div class="exercise3">
+            <h2>Theme Switcher with Persistence</h2>
+            <button onclick="lightMode()">Light Mode</button>
+            <button onclick="darkMode()">Dark Mode</button>
+            <button onclick="blueMode()">Blue Mode</button>
+            
+        </div>
+    </div>
+</body>
+</html>
