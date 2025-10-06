@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-slideshow</title>
+    <style>
+       .general {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            background: #c3aaaa;
+            margin: 150px;
+            padding: 20px;
+            color: white;
+        }
+
+        h2 {
+            margin-bottom: 5px;
+            font-size: 45px;
+            font-weight: bold;
+        }
+
+        .img-container {
+            width: 100%;
+            height: 100vh;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(122, 51, 51, 0.2);
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            display: none;
+        }
+
+        .img-container img.active {
+            display: block;
+        }
+
+        .buttons {
+            margin-top: 15px;
+            background-color:#c7a4a4;
+
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #e3dada;
+            color: rgb(134, 32, 32);
+            font-size: 16px; 
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #f1e0dd;
+        }
+    </style>
+</head>
+<body>
+    <div class="general">
+        <h2>Auto-slideshow</h2>
+
+        <div class="img-container">
+            <img src="./images/2151046459.jpg" alt="bags">
+            <img src="./images/97726.jpg" alt="sneakers">
+            <img src="./images/andres-vera-202NAwjisYA-unsplash.jpg" alt="necklace">
+            <img src="./images/d-panyukov-DwxlhTvC16Q-unsplash.jpg" alt="car">
+        </div>
+
+        <div class="buttons">
+            <button id="pause-btn">Pause</button>
+            <button id="resume-btn">Resume</button>
+        </div>
+        
+    </div>
+
+    <script>
+
+        let timer = 0;
+        let images = document.querySelectorAll(".img-container img");
+        let slideShow;
+        // let slideshow = setInterval(showImage, 3000);
+
+        function showNxtImage() {
+        images[timer].classList.remove("active");
+        timer = (timer + 1) % images.length;
+        images[timer].classList.add("active");
+        }
+
+        function startSlideshow() {
+            slideShow = setInterval(showNxtImage, 3000);
+        }
+
+        
+        document.getElementById("pause-btn").addEventListener("click", () => {
+        clearInterval(slideShow);
+        });
+
+        document.getElementById("resume-btn").addEventListener("click", () => {
+        clearInterval(slideShow);
+        slideshow = setInterval(showNxtImage, 3000);
+        });
+
+        startSlideshow();
+
+    </script>
+</body>
+</html>
