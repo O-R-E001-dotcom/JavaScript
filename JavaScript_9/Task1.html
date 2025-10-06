@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Delayed Joke</h2>
+    <!-- <button onclick="tellJoke()">TELL JOKE</button> -->
+
+    <script>
+        function tellJoke() {
+            return new Promise(function(resolve, reject)  {
+
+                setTimeout(() => {
+                    let theJoke = ("Why do JavaScript developers wear glasses? Because they don't C#! 😎");
+
+                    resolve(`"😂 Here is a funny joke!"
+                     ${theJoke}`);
+                }, 3000);
+            });
+        }
+
+        tellJoke()
+            .then(function(sayJoke) {
+                console.log("The joke:", sayJoke);
+            })
+            .catch(function(error) {
+                console.log("Error:", error)
+            });
+
+        console.log("This runs while waiting...");
+
+        // tellJoke().then(jokes => {
+        //     console.log("The joke:", jokes)
+        // })
+    </script>
+</body>
+</html>

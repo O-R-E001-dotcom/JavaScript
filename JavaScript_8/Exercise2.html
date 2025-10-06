@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p-tag"></p>
+    <button onclick="restartTyping()">Restart typing</button>
+
+    <script>
+        let index = 0;
+        let stc = "Welcome to Javascript Timers";
+        let p = document.getElementById('p-tag');
+
+
+        function showWords() {
+        p[timer].classList.remove("active");
+        timer = (timer + 1) % p.length;
+        p[timer].classList.add("active");
+        }
+
+        function startShowing() {
+            charShow = setTimeout(showWords, 1000);
+        }
+
+        startShowing();
+
+    </script>
+</body>
+</html>

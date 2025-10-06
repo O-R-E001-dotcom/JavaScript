@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Order queue</h2>
+
+    <script>
+
+        let orders = ["Coffee", "Cake", "Juice"];
+
+        function placeOrder(order) {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve();
+                }, 2000);
+            });
+        }
+
+        async function processOrders() {
+            // console.log("Starting order...");
+            
+            // let items = await placeOrder();
+            // console.log("Got items:", items);
+            
+            for (let order of orders) {
+                await placeOrder(order);
+                console.log(`✅ ${order} is ready`)
+            }
+        }
+
+        // Call the async function
+        processOrders();
+
+    </script>
+</body>
+</html>

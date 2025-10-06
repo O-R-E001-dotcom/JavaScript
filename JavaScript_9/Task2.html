@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Random delivery </h2>
+    <script>
+        function deliverOrder(order) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    let successful = Math.random() < 0.5;
+
+                    if (successful) {
+                        resolve("✅ Delivered: Chinchin, Meatpie, Juice");
+                    } else {
+                        reject("❌ Delivery failed: Chinchin, Meatpie, Juice");
+                    }
+                }, 2000);
+            });
+        }
+
+        deliverOrder("Chinchin")
+            .then(function (message) {
+                console.log(message);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    </script>
+</body>
+</html>
