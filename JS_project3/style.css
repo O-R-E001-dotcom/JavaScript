@@ -37,7 +37,19 @@ body {
  
 }
 
-.sidebar .brand {
+.edu {
+    display: flex;
+    flex-direction: row;
+
+}
+.edu img{
+  width: 45px;
+  height: 35px;
+  border-radius: 50%;
+  margin-top: 0;
+}
+
+.edu .brand {
   font-size: 1.3rem;
   margin-bottom: 25px;
   text-align: center;
