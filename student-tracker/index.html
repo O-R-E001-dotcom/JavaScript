@@ -1,73 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Project</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="./script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Performance Tracker</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
 </head>
 <body>
 
     <div class="gen-container">
-        <h1>Student Performance Tracker</h1>
-
-       <section class="student-display">
-            <h2>Add student</h2>
-            <form id="entry">
-                <input type="text" id="name" placeholder="FullName" required>
-                <input type="number" id="age" placeholder="Age" required>
-
-                <div class="option">
-                     
-                     <select name="class" id="class-id">
-                        <option value="" >Class</option>
-                        <option value="SS1">SS1</option>
-                        <option value="SS2">SS2</option>
-                        <option value="SS3">SS3</option>
-                     </select>
+        <!-- Student input form -->
+        <section class="form-section">
+            <form id="input-form">
+        
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" placeholder="Full Name" required>
                 </div>
-               
-                <input type="url" id="image" placeholder="image-url" >
-                <input type="number" id="score1" placeholder="score1" required>
-                <input type="number" id="score2" placeholder="score2" required>
-                <input type="number" id="score3" placeholder="score3" required>
 
-                <button type="submit" id="submitBtn">Add Student</button>
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" placeholder="Age" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="class">Class:</label>
+                    <select id="class" required>
+                        <option value="">Select class</option>
+                        <option value="100L">100L</option>
+                        <option value="200L">200L</option>
+                        <option value="300L">300L</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="image">Image URL:</label>
+                    <input type="url" id="image" placeholder="https://...png">
+                </div>
+
+                <div class="form-group">
+                    <label for="score1">Scores:</label>
+                    <input type="number" id="score1" placeholder="1st subject score" required>
+                    <input type="number" id="score2" placeholder="2nd subject score" required>
+                    <input type="number" id="score3" placeholder="3rd subject score" required>
+                </div>
+
+                <p id="error-mssg"></p>
+                <button type="submit">Add Student</button>
+                <button type="button" id="clear-form" >Clear Form</button>
             </form>
+        </section>
 
-            
-       </section>
+        <!-- Search bar -->
+        <section class="search-bar">
+            <h2>Student Profiles</h2>
+            <input type="text" id="search" placeholder="Enter student name...">
+        </section>
 
-       <section class="student-table">
-            <h2>All Students Info</h2>
-            <input type="text"  id="search-space" placeholder="Search by name... ">
-
+        <!-- Table display -->
+        <section class="studentInfo">
             <table id="studentTable">
                 <thead>
                     <tr>
-                        <th>Profile picture</th>
+                        <th>Profile Picture</th>
                         <th>Name</th>
                         <th>Class</th>
+                        <th>Age</th>
                         <th>Average Score</th>
-                        <th>Performance category</th>
+                        <th>Performance Category</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
-
-                <tbody>
-                    <tr>
-                        <td id="td1">Image</td>
-                        <td id="td2">Sam Yes</td>
-                        <td id="td3">SS2</td>
-                        <td id="td4">80</td>
-                        <td id="td5">Excellent</td>
-                    </tr>
-                    
-                </tbody>
+                <tbody></tbody>
             </table>
-       </section>
-
-      
+        </section>
     </div>
 </body>
 </html>
