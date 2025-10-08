@@ -1,3 +1,4 @@
+
 let grades = [
   { course: "Mathematics", teacher: "Ms. Davis", term: "term1", score: "A", grade: "A" },
   { course: "English Literature", teacher: "Mr. Smith", term: "term1", score: "B", grade: "B" },

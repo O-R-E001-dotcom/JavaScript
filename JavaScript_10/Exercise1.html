@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+<body>
+    <h1>Random Joke Generator</h1>
+
+    <div class="joke-generator">
+        <div id="jokeDisplay" class="joke-text">
+            Click the button to get a random joke!
+        </div>
+    </div>
+
+     <button onclick="getRandomJoke()">Get New Joke</button>
+
+
+    <script>
+
+        async function getRandomJoke() {
+
+            document.getElementById('jokeDisplay').innerHTML = '<span class= "loading">Loading Joke... </span>';
+
+            // function showMessage() {
+            //     console.log("This is a delayes joke");
+            // }
+            // setTimeout
+            try {
+                let response = await fetch('https://official-joke-api.appspot.com/random_joke');
+
+                if (!response.ok) {
+                    throw new Error('Failed to fetch joke');
+                }
+
+                let data = await response.json();
+
+                document.getElementById('jokeDisplay').textContent = '"' + data + '"';
+
+                console.log('Joke:', data)
+
+            } catch (error) {
+                document.getElementById('jokeDisplay').innerHTML = '<span class= "error">Error loading joke. Please try again. </span>';
+
+                console.log('Error:', error);
+            }
+        }
+
+        setTimeout(getRandomJoke, 2000);
+        getRandomJoke();
+
+    </script>
+</body>
+</html>

@@ -15,15 +15,15 @@
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="edu">
-                <img src="./freepik__assistant__48338.jpeg" alt="">
+                <img src="./icon.png" alt="">
                 <h2 class="brand"> EduGrade Pro</h2>
             </div>
             
             <div class="menubar">
-                <button onclick="dashboard()"> <a href=".main"></a>Dashboard</button> 
-                <button onclick="courses()">My Courses</button> 
-                <button onclick="settings()">Settings</button> 
-                <button onclick="help()">Help</button> 
+                <button onclick="dashboard()"> <a href=".main"></a> <i class="fa-solid fa-grip"></i>   Dashboard</button> 
+                <button onclick="courses()"> <i class="fa-solid fa-book-bookmark"></i>My Courses</button> 
+                <button onclick="settings()"> <i class="fa-solid fa-gear"></i>   Settings</button> 
+                <button onclick="help()" class="help"> <i class="fa-regular fa-circle-question"></i>      Help</button> 
             </div>   
             <button class="logoutBtn"> <i class="fa-solid fa-right-from-bracket"></i> Logout</button>
         </aside>
@@ -59,16 +59,17 @@
                 </div>
             </section>
 
-            <section class="grades-section">
-                <div class="grades-header">
+            <div class="grades-header">
                     <h2>My Grades</h2>
                     <div class="filters">
                         <button class="filter-btn active" data-term="all">All</button>
                         <button class="filter-btn" data-term="term1">Term 1</button>
                         <button class="filter-btn" data-term="term2">Term 2</button>
                     </div>
-                </div>
+            </div>
 
+            <section class="grades-section">
+                
                 <table>
                     <thead>
                         <tr class="t-heads">
@@ -79,9 +80,9 @@
                             <th>ACTIONS</th>
                         </tr>
                     </thead>
-
                     <tbody id="gradeTable"></tbody>
                 </table>
+                
             </section>
         </main>
     </div>

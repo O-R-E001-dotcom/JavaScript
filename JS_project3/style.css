@@ -11,13 +11,15 @@
 body {
   background-color: #f5f8fc;
   color: #333;
-  border: 3px solid red;
+  border: 2px solid rgb(248, 248, 248);
 }
 
 /* Layout */
 .gen-container {
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
+  margin: 10px 10px 10px 10px;
+  padding: 20px 10px;
   
 }
 
@@ -30,10 +32,13 @@ body {
   flex-direction: column;
   justify-content: space-between;
   padding: 25px 20px;
-  height: 110vh;
+  height: 95vh;
   box-sizing: border-box;
   position: relative;
   margin-bottom: 0;
+  align-content: left;
+  align-items: left;
+  text-align: left;
  
 }
 
@@ -58,10 +63,25 @@ body {
 .menubar {
   display: flex;
   flex-direction: column;
-  align-content: left;
-  justify-content: left;
-  align-items: left;
+  row-gap: 1rem;
+  
+}
+
+.menubar button {
   text-align: left;
+  position: relative;
+  font-size: 15px;
+  gap: 20px;
+}
+.menubar img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.help {
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .menubar button {
@@ -83,10 +103,10 @@ body {
 }
 
 .logoutBtn {
-  background-color: #4c2323;
+  background-color: #161313;
   color: rgb(170, 25, 25);
   border: none;
-  padding: 10px 0;
+  padding: 15px 0;
   cursor: pointer;
   width: 100%;
   display: block;
@@ -94,10 +114,12 @@ body {
   margin-top: auto;
   margin-bottom: 0%;
   font-weight: bold;
+  font-size: 20px;
 }
 
 .logoutBtn:hover {
   background-color: #991b1b;
+  color: white;
 }
 
 /* Main Area */
@@ -105,7 +127,7 @@ body {
   flex: 1;
   padding: 25px 40px;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 /* Header */
@@ -179,19 +201,21 @@ body {
 }
 
 /* Grades Table */
-.grades-section {
-  margin-top: 35px;
-  background: white;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
 .grades-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 0;
+  margin-top: 50px;
+}
+
+.grades-section {
+  margin-top: 35px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  flex: 1;
+  padding: 2rem;
 }
 
 .filters {
@@ -220,11 +244,15 @@ table {
 }
 
 .t-heads {
-    color: rgb(87, 87, 231);
+    color: rgb(104, 150, 211);
+    background-color: #eee;
+    padding: 0;
+    margin-top: 0;
+    
 }
 
 th, td {
-  padding: 12px;
+  padding: 23px;
   border-bottom: 1px solid #eee;
   text-align: left;
   font-size: 0.95rem;

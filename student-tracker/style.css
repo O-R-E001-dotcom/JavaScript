@@ -1,0 +1,68 @@
+/* * {
+    width: 100%;
+    height: 100vh;
+} */
+
+.gen-container {
+    font-family: 'Times New Roman', Times, serif;
+    border: 1px solid black;
+    gap: 10px;
+    margin: 20px 5px;
+    padding: 2px 20px;
+    background-color: rgb(184, 169, 149);
+}
+
+.student-display {
+    padding: 2px;
+    background-color: rgb(206, 196, 182);
+}
+
+#entry {
+    padding: 10px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    
+}
+
+#entry input {
+    padding: 5px;
+    font-weight: bold;
+    border: 2px solid rgb(88, 55, 71);
+    
+}
+
+.option {
+    padding: 5px;
+    font-weight: bold;
+    border: 2px solid rgb(88, 55, 71);
+    background-color: none;
+}
+
+.student-display button {
+    margin: 5px 10px;
+    padding: 5px;
+    font-weight: bold;
+    border: 2px solid rgb(88, 55, 71);
+    cursor: pointer;
+}
+
+.student-display button:hover {
+    background-color: rgb(112, 137, 158);
+    color: white;
+}
+
+.student-table {
+    font-weight: bold;
+}
+
+.search-space {
+    padding: 5px;
+    margin: 3px 20px;
+}
+
+thead, tr {
+    margin: 6px 25px;
+    color: rgb(27, 1, 1);
+
+}
