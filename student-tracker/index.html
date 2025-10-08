@@ -28,13 +28,15 @@
                      </select>
                 </div>
                
-                <input type="url" id="image" placeholder="image-url" required>
-                <input type="number" id="score" placeholder="score1" required>
-                <input type="number" id="score" placeholder="score2" required>
-                <input type="number" id="score" placeholder="score3" required>
+                <input type="url" id="image" placeholder="image-url" >
+                <input type="number" id="score1" placeholder="score1" required>
+                <input type="number" id="score2" placeholder="score2" required>
+                <input type="number" id="score3" placeholder="score3" required>
+
+                <button type="submit" id="submitBtn">Add Student</button>
             </form>
 
-            <button type="submit" id="submitBtn">Add Student</button>
+            
        </section>
 
        <section class="student-table">
@@ -49,11 +51,19 @@
                         <th>Class</th>
                         <th>Average Score</th>
                         <th>Performance category</th>
-                        <th>Action</th>
                     </tr>
                 </thead>
 
-                <tbody></tbody>
+                <tbody>
+                    <tr>
+                        <td id="td1">Image</td>
+                        <td id="td2">Sam Yes</td>
+                        <td id="td3">SS2</td>
+                        <td id="td4">80</td>
+                        <td id="td5">Excellent</td>
+                    </tr>
+                    
+                </tbody>
             </table>
        </section>
 
