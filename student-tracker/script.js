@@ -40,7 +40,7 @@ function inputInfo(e) {
     let studentPerformance = performanceCategory(avg);
 
     // Add student
-    students = [];
+    // students = [];
 
     let newStudent = {
         id: Date.now(),
@@ -52,8 +52,8 @@ function inputInfo(e) {
         performanceCategory: studentPerformance
     };
 
-    localStorage.setItem("studentsInfo", JSON.stringify(students));
     let students = JSON.parse(localStorage.getItem("studentsInfo")) || [];
+    localStorage.setItem("studentsInfo", JSON.stringify(students));
     students.push(newStudent);
     
 
